@@ -1,11 +1,9 @@
 
 
-
-
-   /* Sidebar styles */
    .sidebar {
     height: 100vh;
     overflow-y: hidden;
+    
   }
   
   .sidebar-column {
@@ -13,34 +11,34 @@
     overflow-y: hidden;
   }
   
-  /* Active sidebar item styles */
   .list-group-item.active {
     background-color: #FF7B29 !important;
     color: white !important;
   }
   
 
-
   .sidebar .list-group-item {
   display: flex;
   align-items: center;
   border: none;
   border-radius: 5px;
-  padding: 10px;
+  padding: 9px;
   transition: background-color 0.3s ease;
+  font-family: 'SF Pro Display', 'Arial', 'sans-serif', 'Poppins' !important;
+  font-size: 16px;
 }
 
 .sidebar .list-group-item.active {
-  background-color: #FF8844; /* Background color for active item */
-  color: white; /* Text color for active item */
+  background-color: #FF8844;
+  color: white; 
 }
 
 .sidebar .list-group-item.active .icon {
-  color: white; /* Icon color for active item */
+  color: white; 
 }
 
 .sidebar .list-group-item .icon {
-  color: #87888C; /* Default icon color */
+  color: #87888C;
   transition: color 0.3s ease;
 }
 

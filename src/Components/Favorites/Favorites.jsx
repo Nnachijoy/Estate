@@ -20,8 +20,9 @@ import sorry from '../../assets/sorry.png';
 import bell from "../../assets/bell.png";
 import profile from '../../assets/profile.png';
 import searchlight from '../../assets/searchlight.png';
-// import "./MyListing.css"; 
+import "./Favorites.css"; 
 import Animation from '../Animation';
+import Head from '../Head'; 
 
 const listingsContainerOne = [
   {
@@ -117,48 +118,19 @@ const MyListing = () => {
         <Animation animationClass="animate__fadeInDownBig" delay={2000}>
           <Container className="p-3 d-flex align-items-center" style={{ position: 'relative', marginLeft: "10px" }}>
             <h3 className="flex-grow-1 mt-1" style={{ marginLeft: "60px", color: "#FF7B29", fontFamily: "Syne", fontWeight: "700", fontSize: "22px" }}>RealHomes</h3>
-            <div className="d-flex align-items-center">
-              <Image
-                src={bell}
-                className="mr-2 mx-2 mb-2 bell"
-                style={{
-                  maxWidth: '15px',
-                  maxHeight: '15px'
-                }}
-              />
-              <Image
-                src={profile}
-                className="prof"
-                style={{
-                  maxWidth: '35px',
-                  maxHeight: '35px',
-                  marginRight: "20px"
-                }}
-                roundedCircle
-              />
-            </div>
+           
           </Container>
         </Animation>
       </div>
 
-      <div className="container d-none d-md-block mb-5">
-        <Container className="p-3" style={{ position: 'relative', marginLeft: "-30px" }}>
-          <div className="d-flex align-items-center position-absolute profile-container">
-            <Image
-              src={bell}
-              className="mr-2 mx-2 mb-4 bell"
-            />
-            <Image
-              src={profile}
-              className="prof"
-              style={{
-                maxWidth: '65px',
-                maxHeight: '65px'
-              }}
-              roundedCircle
-            />
-          </div>
-        </Container>
+      <div className="container d-none d-md-block">
+      <div className="container d-none d-md-block">
+      <Head 
+        bellIcon={bell} 
+        profileImage={profile} 
+      />
+      </div>
+
       </div>
 
       <Container>
@@ -311,8 +283,8 @@ const MyListing = () => {
                     </Button>
                   </div>
                   <Card.Body style={{background:"#f6f7f8"}}>
-                    <Card.Title>{listing.price}</Card.Title>
-                    <Card.Text>{listing.address}</Card.Text>
+                    <Card.Title className='listing-price'>{listing.price}</Card.Title>
+                    <p className='listing-text'>{listing.address}</p>
                     <div className="listing-details d-flex justify-content-between">
                       <div><img src={bed} alt="bed" />{listing.bed}</div>
                       <div><img src={room} alt="room" />{listing.room}</div>

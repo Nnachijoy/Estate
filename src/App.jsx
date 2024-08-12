@@ -1,9 +1,6 @@
-
-
-
-
 import React, { useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import Head from './Components/Head'; 
 import Sidebar from './Components/Sidebar/Sidebar';
 import Dashb from './Components/Dash/Dashb';
 import Activities from './Components/Activity/Activities';
@@ -13,15 +10,16 @@ import AccountSettings from './Components/AccountingSettings/AccountingSettings'
 import Favorites from './Components/Favorites/Favorites';
 import SavedProfile from './Components/SavedProfile/SavedProfile';
 import Logout from './Components/Logout/Logout';
-import Loader from './Components/Loader/Loader'; // Import the Loader component
+import Loader from './Components/Loader/Loader';
 import './App.css'; 
-import { FiAlignJustify } from "react-icons/fi";
 import ham from "./assets/ham.png";
+import bellIcon from './assets/bell.png'; 
+import profileImage from './assets/profile.png';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('Home');
   const [isSidebarVisible, setSidebarVisible] = useState(false);
-  const [loading, setLoading] = useState(false); // State to control loader visibility
+  const [loading, setLoading] = useState(false);
 
   const renderContent = () => {
     switch (activeTab) {
@@ -57,6 +55,7 @@ const App = () => {
 
   return (
     <Container fluid className="app-container">
+      
       <Button 
         className="toggle-sidebar-button d-md-none border-0 bg-white" 
         style={{ background: "darkorange" }} 

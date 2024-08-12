@@ -17,7 +17,7 @@
 
 /* New CSS for day names */
 .day-names strong {
-  font-size: 20px; 
+  font-size: 14.5px; 
 }
 
 @media (max-width: 768px) {
